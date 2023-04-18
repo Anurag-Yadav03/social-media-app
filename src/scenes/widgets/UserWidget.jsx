@@ -71,10 +71,13 @@ const UserWidget = ({ userId, picturePath }) => {
                 },
               }}
             ></Typography>
-            <Typography color={medium}>{friends.length} friends</Typography>
+                     <Typography color={medium}>{friends ? friends.length : 0} friends</Typography>
+
+
           </Box>
-          <ManageAccountsOutlined />
         </FlexBetween>
+          <ManageAccountsOutlined />
+      </FlexBetween>
         <Divider />
         <Box p="1rem 0">
           <Box display="flex" alignItems="center" gap="1rem" mb="0.5rem">
@@ -122,7 +125,6 @@ const UserWidget = ({ userId, picturePath }) => {
 
 
         </Box>
-      </FlexBetween>
     </WidgetWrapper>
   );
 };
